@@ -109,7 +109,7 @@ public class SocketNetwork implements CloseableNetwork {
    * Construct a socket network with a specific timeout.
    *
    * @param conf the configuration to load the network from.
-   * @param timeout timeout when attempting to connect the network.
+   * @param timeout duration to wait until timeout when connecting the network.
    */
   public SocketNetwork(NetworkConfiguration conf, Duration timeout) {
     this(conf, new Connector(conf, timeout).getSocketMap());
